@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #dfe6e9;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Define a altura do body para ocupar a tela inteira */
+    margin: 0;
+    /* Remove margem padrão do body */
+    color: #4a4a4a;
+}
+
+.general {
+    width: 50rem;
+    height: 30rem;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    -webkit-box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.20);
+
+    && .contentEsq {
+        background: rgb(37, 32, 121);
+        background: linear-gradient(321deg, rgba(37, 32, 121, 1) 0%, rgba(49, 49, 142, 1) 0%, rgba(203, 98, 153, 1) 100%);
+        width: 50%;
+        box-sizing: border-box;
+        padding: 50px;
+        font-size: 25px;
+        color: #79385a;
+
+        & span {
+            color: white;
+        }
+    }
+}
+
+.options {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    margin-top: 25px;
+
+    && ul {
+        list-style-type: none;
+
+        && li {
+            float: left;
+            padding-right: 15px;
+
+            && a {
+                color: #eb76ff;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.logo {
+
+    && img {
+        width: 100px;
+        height: 32px;
+        position: relative;
+        margin-top: calc(100% - 82px);
+    }
+}
+
+.contentDir {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    margin-top:50px;
+
+    & .positionDir {
+        width: 20rem;
+        /*background-color: rgba(0, 0, 0, 0.05);*/
+        height: 60%;
+
+        & p {
+            font-size:11px;
+            margin-top:20px;
+            max-width:250px;
+            color: #6b6b6b;
+        }
+
+        & h2 {
+            font-size: 17px;
+
+            & span {
+                color: #eb76ff;
+            }
+        }
+    }
+}
+
+.selections {
+    width:250px;
+    height:4px;
+    margin-top:25px;
+    position:relative;
+
+    && button {
+        width:95px;
+        height:100%;
+        background-color:rgb(192, 192, 192);
+        border-radius:10px;
+        float:left;
+        margin-right:10px;
+        border:none;
+
+        .active {
+            background-color:#eb76ff;
+        }
+        
+    }
+}
+
+.formulario {
+    margin-top:15px;
+
+    & .formSubmit {
+        width:100%;
+        height:25px;
+        margin-top:10px;
+        border-bottom:1px solid gray;
+        padding: 10px 0;
+        font-size:11px;
+        font-weight:bold;
+        color:rgb(170, 88, 185);
+        transition:0.5s;
+    }
+
+    .formSubmit::placeholder {
+        color:gray;
+    }
+
+    & .formSubmit:focus {
+        outline:none;
+        transition:0.5s ease;
+        border-bottom:1px solid #eb76ff;
+    }
+
+    & input {
+        border:none;
+        
+    }
+    
+    & .buttonLogin {
+        width:45%;
+        height:40px;
+        margin-top:25px;
+        border-radius:20px;
+        background-color:transparent;
+        transition: 0.5s;
+        color:rgb(170, 88, 185);
+        font-weight:bold;
+        padding:0 10px;
+        font-size:12px;
+        border:1px solid rgba(235,118,255,0.8);
+    }
+
+    & .buttonLogin:hover {
+        background-color:rgba(235,118,255,0.2);
+        color:#79385a;
+        transition: 0.5s ease;
+        border:1px solid white;;
+    }
+}
+
+.googleLogin {
+    width:100%;
+    height:80px;
+    background-color:rgba(0,0,0,0.05);
+    margin-top:20px;
+    text-align:center;
+    border-radius:50px;
+    font-size:11px;
+}
+
+.loginWithGoogle {
+    background-color:rgb(54, 135, 255);
+    color:white;
+    font-weight:bold;
+    border:0px;
+    font-size:11px;
+    padding-right:15px;
+    margin-top:15px;
+    border-radius:15px;
+    margin-bottom:5px;
+    line-height:32px;
+    height:32px;
+    cursor:pointer;
+}
+
+.whiteBox {
+    background-color:white;
+    width:25px;
+    height:25px;
+    float:left;
+    margin:3px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius:15px;
+
+    & img {
+        width:17px;
+    }
+}
+
+@media (max-width: 768px) {
+    .general {
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .general .contentEsq {
+        display: none;
+    }
+}
